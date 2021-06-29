@@ -12,7 +12,7 @@ The project contains sample code for a http server working with async_hooks. The
 
 # Notes:
 1. Async storage is a stable feature in Node 16.
-2. Expect drop in performance, exact value not calculated.[3](https://blog.kuzzle.io/nodejs-14-asynclocalstorage-asynchronous-calls)
+2. Expect drop in performance, exact value not calculated.[[3](https://blog.kuzzle.io/nodejs-14-asynclocalstorage-asynchronous-calls)]
 
 # Further reading:
 1. https://nodejs.org/api/async_context.html#async_context_class_asynclocalstorage
