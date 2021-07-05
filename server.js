@@ -4,11 +4,15 @@ const { localStorage } = require("./hooks_service");
 
 const app = express();
 
+const requestIdMiddleware = (req, res, next) => {
+    localStorage.initialize(() => next())
+};
+
+app.use(requestIdMiddleware);
+
 app.get("/", (req, res) => {
-    localStorage.initialize(() => {
-        const result = file1()
-        res.send(result);
-    })
+    const result = file1()
+    res.send(result);
 });
 
 const port = process.env.PORT || 3000;
