@@ -4,11 +4,10 @@ const KEY = "key"
 class LocalStorage {
     #asyncLocalStorage
 
-    constructor() {
-        this.#asyncLocalStorage = new AsyncLocalStorage();
-    }
+    constructor() {}
 
     initialize(func) {
+        this.#asyncLocalStorage = new AsyncLocalStorage();
         this.#asyncLocalStorage.run(new Map(), func);
     }
 
